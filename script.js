@@ -31,10 +31,12 @@ check.addEventListener('click',function (){
         guess.textContent = myNUM;
         document.body.style.backgroundColor = '#60b347';
         if(highScore < score){
-            document.querySelector('.highScore').textContent = score;
+            highScore = score;
+            document.querySelector('.highScore').textContent = highScore;
         }
+    }
 //NOT CORRECT NUMBER
-    }else if(number !== myNUM){
+    else if(number !== myNUM){
         if(score > 1){
             displayMessage(number > myNUM ? "Too High!😥" : "Too Low!😪");
             score--;
@@ -52,9 +54,11 @@ check.addEventListener('click',function (){
 
 ////AGAIN BUTTON
 again.addEventListener('click',function(){
+    myNUM = Math.trunc(Math.random() * 20) + 1;
     displayMessage("Start Guess Again...")
-     document.querySelector(".number").value='';
+    document.querySelector(".number").value='';
     document.querySelector(".score").textContent = 20;
+    score = 20;
     guess.textContent = '?'
     document.body.style.backgroundColor = '#1B2021';
 })
