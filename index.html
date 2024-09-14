@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>GUESS THE NUMBER</title>
+</head>
+
+<body class="bg-[#1B2021] py-5">
+    <div class="container p-5 m-auto">
+        <div class="flex md:flex-row flex-col-reverse justify-between items-center gap-5"> 
+            <button class="again rounded-lg border py-4 px-8 bg-[#E3DCC2] text-2xl font-bold">AGAIN</button>
+            <p class="text-xl font-semibold text-[#E3DCC2]">GUESS NUMBER BETWEEN [1 : 20] </p>
+        </div>
+
+        <div class="py-24 text-center flex flex-col justify-center items-center gap-3">
+            <h1 class="text-4xl font-bold text-[#E3DCC2]">Let's Play !</h1>
+            <p class="guess text-5xl font-bold bg-[#E3DCC2] px-12 py-5">?</p>
+        </div>
+
+        <div class="flex md:flex-row flex-col justify-between gap-5 w-[70%] m-auto">
+            <div class="flex flex-col justify-between items-center gap-3">
+                <input type="number" class="number bg-transparent border-2 border-[#E3DCC2] py-10 text-white text-center w-[200px]  text-4xl">
+                <button class="check rounded-lg border py-4 px-8 bg-[#E3DCC2] text-2xl font-bold w-[200px] ">CHECK!</button>
+            </div>
+
+            <div class="text-center md:text-left">
+                <p class="message text-white text-2xl font-semibold pb-5">Start Guess...</p>
+                <p class=" text-white text-2xl font-semibold">>Your Score : <span class="score">20</span></p>
+                <p class=" text-white text-2xl font-semibold">>Your HighScore : <span class="highScore">0</span></p>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
